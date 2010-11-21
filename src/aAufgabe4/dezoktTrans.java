@@ -1,7 +1,6 @@
 package aAufgabe4;
 
-
-import java.util.Scanner;
+import java.util.*;
 /*
 *     Aufgabenstellung Teil IV
     Schreiben Sie ein Programm, welches eine Dezimalzahl (Basis 10) einliest und in eine Hexadezimal-zahl (Basis 16)
@@ -26,7 +25,7 @@ public class dezoktTrans
             dezimalzahl = myScanner.nextInt();                                     //Lesen der dezimalzahl mit Scanner
             if (dezimalzahl !=-1)                                                //damit nicht der gesamte Text ausgeben wird wenn der Benutzer -1 zum Beenden eingibt
             {
-            System.out.println("In welches Zahlenformat möchten Sie die Dezimalzahl "+dezimalzahl+" konvertieren? \n Bitte wählen Sie: \n 1 für Hexadezimal \n 2 für Octaln-1 zum beenden");
+            System.out.println("In welches Zahlenformat möchten Sie die Dezimalzahl "+dezimalzahl+" konvertieren?nBitte wählen Sie: n 1 für Hexadezimaln 2 für Octaln-1 zum beenden");
             auswahl = myScanner.nextInt();
                 switch (auswahl)
                 {
@@ -44,11 +43,12 @@ public class dezoktTrans
     //Integer.toHexString(dezimalzahl).toUpperCase()                            //Diese Methode macht das selbste von Haus aus
     private static String convertToHex(int zahl)
     {
+        String hexaDezimalzahl = " ", rest = " ";
         
-        String hexaDezimalzahl = " ";
         while (zahl != 0)
         {
-            hexaDezimalzahl = intToLetterConverter(zahl%16) + hexaDezimalzahl;    //hexaDezimalzahl = Teilerrest(Dieses wird an die Methode zur Konvertierung übergeben) + "alte hexaDezimalzahl"    
+            rest = intToLetterConverter(zahl%16);                                //hexaDezimalzahl = Teilerrest(Dieses wird an die Methode zur Konvertierung übergeben) + "alte hexaDezimalzahl"    
+            hexaDezimalzahl = rest + hexaDezimalzahl;
             zahl = zahl / 16;                                                    //Berechnung des Teilungserbnisses
         }
         return hexaDezimalzahl;
@@ -60,9 +60,12 @@ public class dezoktTrans
     private static String convertToOct(int zahl)
     {
         String octalZahl = " ";
+        int rest = 0;
+        
         while (zahl != 0)                            
         {
-            octalZahl = zahl%8 + octalZahl;                                        //octalZahl = Teilerrest + "alte OctalZahl"
+            rest = zahl % 8;
+            octalZahl = rest + octalZahl;                                        //octalZahl = Teilerrest + "alte OctalZahl"
             zahl = zahl / 8;                                                    //Berechnung des Teilungserbnisses
         }
         return octalZahl;
@@ -74,7 +77,7 @@ public class dezoktTrans
     {
         switch (convert)
         {
-        case 10: return "A";                                                             //break nicht nötig, da hier nach dem return der Code sowieso nicht mehr erreichbar wäre    
+        case 10: return "A";                                                     //break nicht nötig, da hier nach dem return der Code sowieso nicht mehr erreichbar wäre    
         case 11: return "B";                
         case 12: return "C";                
         case 13: return "D";                
@@ -87,4 +90,3 @@ public class dezoktTrans
     
 }
  
-
