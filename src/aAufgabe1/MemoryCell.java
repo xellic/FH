@@ -9,7 +9,7 @@ package aAufgabe1;
 		//konstruktor
 		public MemoryCell()
 		{
-			this.content = content++;
+			this.content =  content++;
 		}
 		
 		//getter und setter
