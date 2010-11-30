@@ -75,8 +75,8 @@ public class MemoryGame
 	{
 		for (int i = 0; i <= 3; i++)
 		{
-		field[0][0].setVisible(true);			
-		field[1][1].setVisible(true);
+					
+
 			
 			System.out.println();
 			for (int j = 0; j <= 3; j++)
