@@ -1,4 +1,4 @@
-package aAufgabe4;
+package Aufgabe4;
 
 import java.util.*;
 /*

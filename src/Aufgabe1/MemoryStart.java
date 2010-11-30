@@ -1,4 +1,4 @@
-package aAufgabe1;
+package Aufgabe1;
 
 public class MemoryStart
 {

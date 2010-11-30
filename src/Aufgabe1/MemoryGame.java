@@ -1,4 +1,4 @@
-package aAufgabe1;
+package Aufgabe1;
 
 //import java.lang.reflect.Array;
 

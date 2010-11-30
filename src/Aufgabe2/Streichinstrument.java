@@ -1,4 +1,4 @@
-package aAufgabe2;
+package Aufgabe2;
 
 public class Streichinstrument 
 {
