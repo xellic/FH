@@ -5,11 +5,13 @@ package aAufgabe1;
 	{
 		private int content;
 		private boolean visible;
+		static int counter;
 		
 		//konstruktor
 		public MemoryCell()
 		{
-			this.content =  content++;
+			counter++;
+			this.content =  content+counter;
 		}
 		
 		//getter und setter
