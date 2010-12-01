@@ -1,76 +1,64 @@
 package Aufgabe2;
 
-
-public class Schlaginstrument {
-
-	
-	String instrumentenName;
-	String kategorie;
-	boolean definierbareTonhoehe;
-//	static Schlaginstrument[] array;
-	
-	//Konstruktor??
-	
-	public Schlaginstrument(String instrumentenName, String kategorie, boolean definierbareTonhoehe) {
-	
-		this.instrumentenName = instrumentenName;
-		this.kategorie = kategorie;
-		this.definierbareTonhoehe = definierbareTonhoehe;
-	}
+public class Schlaginstrument 
+{
+	private String instrumentenName = "";
+	private String kategorie = "";
+	private boolean definierbareTonhoehe = false;
 	
 	
-	// Setter Methoden
-	public void setInstrumentenName (String instrumentenName)
+	
+	//Konstruktor
+	public Schlaginstrument()
 	{
-		this.instrumentenName = instrumentenName;
+		instrumentenName = "";
+		kategorie = "";
+		definierbareTonhoehe = false;
 	}
 	
-	public void setKategorie (String kategorie)
-	{
-		this.kategorie = kategorie;
-	}
-	public void setDefinierbareTonhoehe (boolean definierbareTonhoehe)
+	
+	public Schlaginstrument(String instrumentenName, String kategorie, boolean definierbareTonhoehe)
+		
 	{
 		this.definierbareTonhoehe = definierbareTonhoehe;
+		this.kategorie = kategorie;
+		this.instrumentenName = instrumentenName;
 	}
 	
-	//Getter Methoden
-	public String getInstrumntenName (String instrumentenName)
+	
+	//set Methoden
+	public void setInstrumentenName(String instrumentenName)
+	{
+		this.instrumentenName = instrumentenName; 
+	}
+	
+	public void setKategorie(String kategorie)
+	{
+		this.kategorie = kategorie; 
+	}
+	
+	public void setdefinierbareTonhoehe(boolean definierbareTonhoehe)
+	{
+		this.definierbareTonhoehe = definierbareTonhoehe; 
+	}
+	
+	
+	//get Methoden
+	public String getInstrumentenName()
 	{
 		return instrumentenName;
 	}
-	
-	public String getKategorie (String kategorie)
+	public String getKategorie()
 	{
 		return kategorie;
 	}
-	
-	public boolean getDefinierbareTonhoehe (boolean definierbareTonhoehe)
+	public boolean getDefinierbareTonhoehe()
 	{
 		return definierbareTonhoehe;
 	}
-	
-	//Read Array Methode
-	public static void readArray(Schlaginstrument[] array)
-	{
-		for (int i = 0; i < array.length; i++)
-		{
-			System.out.println(array[i]);
-		}
-	}
-	//FillArray Methode
-	public static void fillArray(Schlaginstrument[] array, Schlaginstrument s, int position)
-	{
-		array[position] = s;
-	}
-	//To String Methode
+
 	public String toString()
 	{
-		return instrumentenName +" "+ kategorie +" " + definierbareTonhoehe;
+		return String.format("%s",getInstrumentenName()) + String.format("%20s",getKategorie()) +String.format("%20s",getDefinierbareTonhoehe());
 	}
-	
-
-	
-
 }
-

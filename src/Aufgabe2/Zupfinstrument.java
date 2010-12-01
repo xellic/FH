@@ -1,11 +1,12 @@
 package Aufgabe2;
 
+
 public class Zupfinstrument 
 {
-	String name;
-	String kategorie;
-	String farbe;
-	static Zupfinstrument[] array2;
+	private String name;
+	private String kategorie;
+	private String farbe;
+	
 	
 	
 	//Konstruktor
@@ -23,7 +24,7 @@ public class Zupfinstrument
 		this.kategorie = kategorie;
 		this.farbe = farbe;
 	}
-		
+	
 	
 	//setter
 	
@@ -41,6 +42,8 @@ public class Zupfinstrument
 		this.farbe = farbe;
 	}
 	
+
+	
 	//getter
 	
 	public String getName()
@@ -56,25 +59,12 @@ public class Zupfinstrument
 		return farbe;
 	}
 	
-	//FillArray
-	public static void fillArray(Zupfinstrument[] array2, Zupfinstrument zu, int position)
-	{
-		array2[position] = zu;
-	}
-
-	//ReadArray
-	public static void readArray(Zupfinstrument[] array2)
-	{
-		for (int i=0; i<array2.length; i++)
-		{
-		System.out.println(array2[i]);
-		
-		}
-	}
 	
-	//ToString
 	public String toString()
 	{
-		return name + " " + kategorie + " " + farbe;
+		return name + "\t\t" + kategorie + "\t\t" + farbe;
 	}
+	
+
+	
 }

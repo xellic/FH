@@ -2,10 +2,10 @@ package Aufgabe2;
 
 public class Tasteninstrument 
 {
-	String name = "";
-	String tonerzeugung = "";
-	boolean elektroInstrument = false;
-	static Tasteninstrument[] array3;
+	private String name = "";
+	private String tonerzeugung = "";
+	private boolean elektroInstrument = false;
+
 	
 	
 	//Konstruktor
@@ -55,25 +55,10 @@ public class Tasteninstrument
 	{
 		return elektroInstrument;
 	}
-	//FillArray
-	public static void fillArray(Tasteninstrument[] array3, Tasteninstrument t, int position)
-	{
-		array3[position] =  t;
-	}
 	
-	//ReadArray
-	public static void readArray(Tasteninstrument[] array3)
-	{
-		for(int i=0; i<array3.length; i++)
-		{
-			System.out.println(array3[i]);
-		}
-	}
-	
-	//ToString Methode
 	public String toString()
 	{
-		return name +" "+ tonerzeugung +" " + elektroInstrument;
+		return name +"\t\t"+ tonerzeugung +"\t\t" + elektroInstrument;
 	}
 	
 	

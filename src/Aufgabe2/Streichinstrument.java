@@ -2,12 +2,11 @@ package Aufgabe2;
 
 public class Streichinstrument 
 {
-	String name;
-	String funktionsweise;
-	String typ;
-	static Streichinstrument[] array1;
+	private String name;
+	private String funktionsweise;
+	private String typ;
 	
-	//Konstruktor
+	//konstruktor
 	public Streichinstrument()
 	{
 		name = "";
@@ -37,7 +36,7 @@ public class Streichinstrument
 		this.typ = typ;
 	}
 	
-	//Getter
+	//getter
 	public String getName()
 	{
 		return name;
@@ -53,26 +52,8 @@ public class Streichinstrument
 		return typ;
 	}
 	
-	//FilArray Methode
-	public static void fillArray(Streichinstrument[] array1, Streichinstrument se, int position)
-	{
-		array1[position] = se;
-	}
-	
-	//ReadArray Methode
-	public static void readArray(Streichinstrument[] array1)
-	{
-		for (int i=0; i<array1.length; i++)
-		{
-			System.out.println(array1[i]);
-	
-		}
-	}
-	
-	
-	//ToString Methode
 	public String toString()
 	{
-		return name + "" + typ + "" + funktionsweise;
+		return name + "\t\t" + typ + "\t\t" + funktionsweise;
 	}
 }
