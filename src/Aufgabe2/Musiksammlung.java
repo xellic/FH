@@ -26,6 +26,8 @@ public class Musiksammlung
 	public void addTast(Tasteninstrument instruobjekt)
 	{
 		tastenarray[anzTast++] = instruobjekt;
+		
+	
 	}
 	public void addStreich(Streichinstrument instruobjekt)
 	{
@@ -44,7 +46,7 @@ public class Musiksammlung
 			for (int i=0;i<anzSchl;i++)			
 			{
 				s +="\n";
-				s += schlagarray[i];
+				s += "[" +schlagarray[i] +"]";
 			}
 		s +="\n------------------------------------------";
 		s +="\n------------------------------------------";
